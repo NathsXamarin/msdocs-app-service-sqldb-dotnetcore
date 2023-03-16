@@ -30,8 +30,8 @@ namespace DotNetCoreSqlDb
         {
             services.AddControllersWithViews();
             services.AddDbContext<MyDatabaseContext>(options =>
-                    // options.UseSqlServer(Configuration.GetConnectionString("MyDbConnection")));              // OLD CONNECTION 
-                    options.UseSqlServer(Configuration.GetConnectionString("AZURE_SQL_CONNECTIONSTRING")));     // NEW CONNECTION
+                    // options.UseSqlServer(Configuration.GetConnectionString("MyDbConnection")));      // OLD CONNECTION 
+                    options.UseSqlServer(Configuration.GetConnectionString("defaultConnection")));      // NEW CONNECTION
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
